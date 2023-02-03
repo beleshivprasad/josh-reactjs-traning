@@ -6,13 +6,12 @@ console.log(a); // Here Output will be undefiend as it is not initialized.
 a = 10;
 console.log(a); // Here Output will be 10 as it is  initialized with 10
 
-const b = 20; // Syntax Error const variable has initialize on with declaration;
-console.log(b);
+// const b; // Syntax Error const variable has initialize on with declaration;
+// console.log(b);
 // b = 20
-// uncommenting above line(11) throw below error
-// Even if we have initalized the const b with 20 (const b=10;) this will throw a Type Error as we
+// uncommenting line(9 and 11) will throw synatx and type error respectively
+// Even if we have initalized the const b with 20 (b=10;) this will throw a Type Error as we
 // cannot reassign variables declared with const
-console.log(b);
 
 // Typeof Operator
 console.log(typeof 10); // number
@@ -20,8 +19,8 @@ console.log(typeof "str"); // string
 console.log(typeof false); // boolean
 console.log(typeof null); // object
 console.log(typeof NaN); // number
-console.log(typeof []); // number
-console.log(typeof new Array()); // number
+console.log(typeof []); // object
+console.log(typeof new Array()); // object
 console.log(typeof {}); // object
 console.log(typeof function () {}); // function
 console.log(typeof (() => {})); // function
