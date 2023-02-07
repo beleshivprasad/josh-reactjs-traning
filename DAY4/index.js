@@ -10,7 +10,7 @@ function getNumber() {
   }
 }
 
-console.log("getNumber() => ", getNumber()); // 5,
+// console.log("getNumber() => ", getNumber()); // 5,
 
 function odd_or_even(num) {
   switch (true) {
@@ -24,7 +24,18 @@ function odd_or_even(num) {
       console.log("invalid number");
   }
 }
-odd_or_even(1);
+// odd_or_even(1);
+
+function call() {
+  let count = 100;
+  while (count) {
+    if (count === 34) return;
+    console.log(count); // 100,99,98,.....,35
+    count--;
+  }
+}
+
+call(); // above call function will get terminated when count reaches to 34, immediatedly exiting the function and 33,34 will not get executed
 
 /*
   ans: Whenever we use return keyword inside the function, whenever it is triggered the code execution after the return statement stop executing and control exits from the function,
@@ -70,7 +81,7 @@ function test(callback) {
 }
 
 function callbackFunc() {
-  console.log("Calling the callback function");
+  // console.log("Calling the callback function");
   return 5;
 }
 
@@ -85,7 +96,7 @@ test(callbackFunc()); // output: Calling the callback function and TypeError, ca
 
 test(() => callbackFunc()); // output: Calling the callback function
 /*
-  we are passing callbackFunc inside the ans arrow function which is gettng executed and inside it we are executing callbackFunc and return value reutrned by callbackFunc
+  we are passing callbackFunc inside the ans arrow function which is gettng executed and inside it we are executing callbackFunc and return value returned by callbackFunc
 */
 
 // What happens when you return callback() from the test function?
