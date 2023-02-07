@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.1</title>
+    <script text="application/javascript">
+      let testEle = document.getElementById("test");
+
+      console.log(testEle);
+      // Output : Null
+      //   Reason:
+      //     HTML is scripting language which is parsed from top to bottom, line-by-line by browser.
+      //     So DOM is unable to find any element as it is not parsed and added over DOM.(it is in body after the head tag)
+    </script>
+  </head>
+  <script text="application/javascript">
+    testEle = document.getElementById("test");
+
+    console.log(testEle);
+    // Output : Null
+    // Reason: Same as above
+  </script>
+  <body>
+    <h1 id="test">Hello World!</h1>
+  </body>
+  <script text="application/javascript">
+    testEle = document.getElementById("test");
+
+    console.log(testEle);
+    // Output : <h1 id="test">Hello World!</h1>
+    // Reason: HTML is already parsed the h1 tag, now we try to access DOM we get the element.
+    // Large js file/scripts may slow down page rendering so this is another reason to keep script after body tag
+  </script>
+</html>
